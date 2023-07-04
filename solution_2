@@ -1,0 +1,28 @@
+create database University;
+create table University.students(
+student_id int primary key,
+student_name varchar(50),
+student_age int,
+student_major varchar(50)
+);
+insert into  University.students values
+(1,"manoj",18,"Biology"),
+(2,"selva",15,"Maths_Biology"),
+(3,"vino",20,"Computer science"),
+(4,"ram",17,"Economics"),
+(5,"ramesh",19,"Computer science");
+
+select * from University.students;
+drop table University.students;
+
+
+select * from University.students
+WHERE student_major LIKE "Computer science"; 
+
+SELECT max(student_age) from University.students;
+
+update University.students set student_major="Computer science" WHERE student_id=1; 
+select * from University.students;
+
+DELETE FROM University.students WHERE student_id=1;
+select * from University.students
